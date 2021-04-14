@@ -1,0 +1,47 @@
+.header-logo {
+    width: 100px;
+    height: 50px;
+}
+
+.dashboard-nav ul li a {
+    color: #5c5a5a;
+    font-weight: 400;
+}
+
+.dashboard-nav ul li a:hover {
+    color: #254441;
+}
+
+.dashboard-nav ul li.active a {
+    color: #254441;
+}
+
+.dropdown-item:hover {
+    color: #254441;
+    background: none;
+}
+
+.notification-icon {
+    color: #254441;
+}
+
+.list-footer {
+    background: #254441;
+}
+
+.notification-list-user-name {
+    color: #254441;
+    font-weight: bolder;
+}
+
+.edit-link:hover {
+    color: #254441;
+}
+
+.user-vendor-name {
+    color: #254441;
+}
+
+.float-left > .summary-count {
+    font-size: 1.8rem;
+}
