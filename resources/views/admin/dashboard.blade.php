@@ -58,11 +58,15 @@
                                         <span class="user-icon">
                                             <img src="images/dashboard-profile.jpg" alt="" class="rounded-circle mb10">
                                         </span>
-                                        <span class="user-vendor-name">name</span>
+                                        <span class="user-vendor-name">{{ auth()->user()->name }}</span>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <a class="dropdown-item" href="#">Dashboard</a>
-                                        <a class="dropdown-item" href="#">Products</a>
+                                        <a class="dropdown-item" href="#">Countries</a>
+                                        <a class="dropdown-item" href="#">Cities</a>
+                                        <a class="dropdown-item" href="#">Brands</a>
+                                        <a class="dropdown-item" href="#">Categories</a>
+                                        <a class="dropdown-item" href="/products">Products</a>
                                         <a class="dropdown-item" href="#">Product variants</a>
                                         <a class="dropdown-item" href="#">Variant values</a>
                                         <a class="dropdown-item" href="#">My Profile </a>
@@ -87,13 +91,17 @@
                 <div class="vendor-profile-img">
                     <img src="images/dashboard-profile.jpg" alt="" class="rounded-circle">
                 </div>
-                <h3 class="vendor-profile-name text-bold">name</h3>
+                <h3 class="vendor-profile-name text-bold">{{ auth()->user()->name }}</h3>
                 <a href="#" class="edit-link">edit profile</a>
             </div>
             <div class="dashboard-nav">
                 <ul class="list-unstyled">
                     <li class="active"><a href="/home"><span class="dash-nav-icon"></span>Dashboard</a></li>
-                    <li><a href="#"><span class="dash-nav-icon"></span>Products</a></li>
+                    <li><a href="#"><span class="dash-nav-icon"></span>Countries</a></li>
+                    <li><a href="#"><span class="dash-nav-icon"></span>Cities</a></li>
+                    <li><a href="#"><span class="dash-nav-icon"></span>Brands</a></li>
+                    <li><a href="#"><span class="dash-nav-icon"></span>Categories</a></li>
+                    <li><a href="/products"><span class="dash-nav-icon"></span>Products</a></li>
                     <li><a href="#"><span class="dash-nav-icon"></span>Product variants</a></li>
                     <li><a href="#"><span class="dash-nav-icon"></span>Variant values</a></li>
                     <li><a href="#"><span class="dash-nav-icon"></span>My Profile </a></li>
@@ -101,7 +109,7 @@
                 </ul>
             </div>
         </div>
-        @yield('admin-dashboard-content')
+        @yield('content')
     </div>
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/menumaker.min.js') }}"></script>

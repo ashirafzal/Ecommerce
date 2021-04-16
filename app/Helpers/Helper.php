@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Country;
 use App\Models\Slider;
+use App\Models\SubCategory;
 
 class Helper
 {
@@ -20,6 +21,14 @@ class Helper
             ->get();
 
         return $categories;
+    }
+
+    public static function subcategories()
+    {
+        $subcategories = SubCategory::where('show_in_outlet', true)
+            ->get();
+
+        return $subcategories;
     }
 
     public static function sliders()

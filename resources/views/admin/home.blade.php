@@ -1,6 +1,6 @@
 @extends('admin.dashboard')
 
-@section('admin-dashboard-content')
+@section('content')
 <div class="container-fluid">
     <div class="dashboard-content">
         <!-- <div class="row">
@@ -45,6 +45,42 @@
                         <div class="float-left">
                             <div class="summary-count">1000</div>
                             <p>Total Variant Values</p>
+                        </div>
+                        <!-- <div class="summary-icon"><i class="icon-004-chat"></i></div> -->
+                    </div>
+                    <div class="card-footer text-center"><a href="#">View All</a></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="card card-summary">
+                    <div class="card-body">
+                        <div class="float-left">
+                            <div class="summary-count">100</div>
+                            <p>Total Categories</p>
+                        </div>
+                        <!-- <div class="summary-icon"><i class="icon-004-chat"></i></div> -->
+                    </div>
+                    <div class="card-footer text-center"><a href="#">View All</a></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="card card-summary">
+                    <div class="card-body">
+                        <div class="float-left">
+                            <div class="summary-count">580</div>
+                            <p>Total Sub Categories</p>
+                        </div>
+                        <!-- <div class="summary-icon"><i class="icon-004-chat"></i></div> -->
+                    </div>
+                    <div class="card-footer text-center"><a href="#">View All</a></div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="card card-summary">
+                    <div class="card-body">
+                        <div class="float-left">
+                            <div class="summary-count">120</div>
+                            <p>Total Brands</p>
                         </div>
                         <!-- <div class="summary-icon"><i class="icon-004-chat"></i></div> -->
                     </div>

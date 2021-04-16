@@ -18,6 +18,12 @@ Route::get('/report_error', function () { return view('report_error'); });
 
 Route::get('/dashboard', function () {return view('admin.dashboard'); });
 
+Route::get('/products', function () {return view('admin.products_show'); });
+
+Route::get('/create-products', function () {return view('admin.create_products'); });
+
+Route::post('/product-created', '\App\Http\Controllers\WebsiteController@CreateProduct');
+
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::post('contact', '\App\Http\Controllers\WebsiteController@contact');
