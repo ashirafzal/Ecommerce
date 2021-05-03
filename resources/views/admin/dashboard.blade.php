@@ -56,7 +56,7 @@
                                 <li class="nav-item dropdown dropleft user-vendor ">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <span class="user-icon">
-                                            <img src="../images/dashboard-profile.jpg" alt="" class="rounded-circle mb10">
+                                            <img src="{{ asset('images/dashboard-profile.jpg') }}" alt="" class="rounded-circle mb10">
                                         </span>
                                         <span class="user-vendor-name">{{ auth()->user()->name }}</span>
                                     </a>
@@ -89,7 +89,7 @@
         <div class="dashboard-sidebar offcanvas-collapse">
             <div class="vendor-user-profile">
                 <div class="vendor-profile-img">
-                    <img src="../images/dashboard-profile.jpg" alt="" class="rounded-circle">
+                    <img src="{{ asset('images/dashboard-profile.jpg') }}" alt="" class="rounded-circle">
                 </div>
                 <h3 class="vendor-profile-name text-bold">{{ auth()->user()->name }}</h3>
                 <a href="#" class="edit-link">edit profile</a>

@@ -10,7 +10,7 @@
         </div>
         <br>
         <div class="row">
-            <table class="table table-striped border">
+            <table class="table table-bordered table-light text-center">
                 <thead>
                     <tr>
                         <th scope="col">S.No</th>
@@ -31,8 +31,13 @@
                         <td>{{ $products->min_delete_time }}</td>
                         <td>{{ $products->qty_in_stock }}</td>
                         <td>{{ $products->compare_price }}</td>
+                        <td><a class="btn btn-info" href="{{$products->id}}/product/detail">View</a></td>
                         <td><a class="btn btn-primary" href="{{$products->id}}/product">Edit</a></td>
-                        <td><a class="btn btn-danger" href="#">Delete</a></td>
+                        <form method="POST" action="/{{$products->id}}/delete-product">
+                            @csrf
+                            @method('delete')
+                            <td><button class="btn btn-danger" type="submit">Delete</button></td>
+                        </form>
                     </tr>
                     @endforeach
                 </tbody>
@@ -44,10 +49,10 @@
         </div>
         <br>
         <div class="row">
-            <table class="table table-striped border">
+            <table class="table table-bordered table-light text-center">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">S.No</th>
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
                         <th scope="col">Handle</th>
@@ -59,6 +64,7 @@
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
+                        <td><a class="btn btn-info" href="#">View</a></td>
                         <td><a class="btn btn-primary" href="#">Edit</a></td>
                         <td><a class="btn btn-danger" href="#">Delete</a></td>
                     </tr>
@@ -71,10 +77,10 @@
         </div>
         <br>
         <div class="row">
-            <table class="table table-striped border">
+            <table class="table table-bordered table-light text-center">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">S.No</th>
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
                         <th scope="col">Handle</th>
@@ -86,6 +92,7 @@
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
+                        <td><a class="btn btn-info" href="#">View</a></td>
                         <td><a class="btn btn-primary" href="#">Edit</a></td>
                         <td><a class="btn btn-danger" href="#">Delete</a></td>
                     </tr>

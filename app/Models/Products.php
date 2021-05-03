@@ -32,4 +32,9 @@ class Products extends Model
         return $this->hasOne(Category::class,'id','category_id');
     }
 
+    public function vendor()
+    {
+        return $this->hasOne(Vendor::class,'id','vendor_id');
+    }
+
 }

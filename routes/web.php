@@ -58,6 +58,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/{id}/product', '\App\Http\Controllers\WebsiteController@ViewProduct');
 
+    Route::get('/{id}/product/detail', '\App\Http\Controllers\WebsiteController@ProductDetail');
+
     Route::put('/{id}/update-product', '\App\Http\Controllers\WebsiteController@UpdateProduct');
 
     Route::delete('/{id}/delete-product', '\App\Http\Controllers\WebsiteController@DestroyProduct');

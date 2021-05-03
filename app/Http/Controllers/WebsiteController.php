@@ -93,6 +93,17 @@ class WebsiteController extends Controller
         return view('layouts.view.product', ['product' => $product]);
     }
 
+    public function ProductDetail($id)
+    {
+        $product = Products::find($id);
+
+        $product = Products::with('subcategory', 'category', 'brand','vendor')
+            ->where('id', $id)
+            ->first();
+
+        return view('layouts.detail.product_detail', ['product' => $product]);
+    }
+
     public function UpdateProduct($id)
     {
         $validate = Validator::make(Request::all(), [
