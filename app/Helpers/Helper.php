@@ -5,6 +5,7 @@ namespace App\Helpers;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Country;
+use App\Models\Products;
 use App\Models\Slider;
 use App\Models\SubCategory;
 
@@ -55,4 +56,12 @@ class Helper
 
         return $countries;
     }
+
+    public static function products()
+    {
+        $products = Products::where('is_active',true)->paginate(50);
+
+        return $products;
+    }
+
 }

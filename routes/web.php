@@ -2,33 +2,70 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () { return view('welcome'); });
+/*** Main website routes ***/
 
-Route::get('/contact', function () { return view('contact'); });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/about', function () { return view('about'); });
+Route::get('/contact', function () {
+    return view('contact');
+});
 
-Route::get('/blogs', function () { return view('blogs'); });
+Route::get('/about', function () {
+    return view('about');
+});
 
-Route::get('/policy', function () { return view('policy'); });
+Route::get('/blogs', function () {
+    return view('blogs');
+});
 
-Route::get('/careers', function () { return view('careers'); });
+Route::get('/policy', function () {
+    return view('policy');
+});
 
-Route::get('/report_error', function () { return view('report_error'); });
+Route::get('/careers', function () {
+    return view('careers');
+});
 
-Route::get('/dashboard', function () {return view('admin.dashboard'); });
-
-Route::get('/products', function () {return view('admin.products_show'); });
-
-Route::get('/create-products', function () {return view('admin.create_products'); });
-
-Route::post('/product-created', '\App\Http\Controllers\WebsiteController@CreateProduct');
-
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/report_error', function () {
+    return view('report_error');
+});
 
 Route::post('contact', '\App\Http\Controllers\WebsiteController@contact');
 
 Route::post('error-report', '\App\Http\Controllers\WebsiteController@ReportError');
+
+/*** End of main website routes ***/
+
+/*** Dashboard routes ***/
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    });
+
+    Route::get('/products', function () {
+        return view('admin.products_show');
+    });
+
+    Route::get('/create-products', function () {
+        return view('admin.create_products');
+    });
+
+    Route::post('/product-created', '\App\Http\Controllers\WebsiteController@CreateProduct');
+
+    Route::get('/{id}/product', '\App\Http\Controllers\WebsiteController@ViewProduct');
+
+    Route::put('/{id}/update-product', '\App\Http\Controllers\WebsiteController@UpdateProduct');
+
+    Route::delete('/{id}/delete-product', '\App\Http\Controllers\WebsiteController@DestroyProduct');
+
+    Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+});
+
+/*** End of dashboard routes ***/
 
 Auth::routes();
 

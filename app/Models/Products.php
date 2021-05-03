@@ -14,7 +14,7 @@ class Products extends Model
 
     public function subcategory()
     {
-        return $this->hasOne(SubCategory::class);
+        return $this->hasOne(SubCategory::class,'id','sub_category_id');
     }
 
     public function productvariants()
@@ -22,5 +22,14 @@ class Products extends Model
         return $this->hasMany(ProductVariant::class);
     }
 
+    public function brand()
+    {
+        return $this->hasOne(Brand::class,'id','brand_id');
+    }
+
+    public function category()
+    {
+        return $this->hasOne(Category::class,'id','category_id');
+    }
 
 }
