@@ -62,8 +62,8 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <a class="dropdown-item" href="#">Dashboard</a>
-                                        <a class="dropdown-item" href="#">Countries</a>
-                                        <a class="dropdown-item" href="#">Cities</a>
+                                        <a class="dropdown-item" href="/countries">Countries</a>
+                                        <a class="dropdown-item" href="/cities">Cities</a>
                                         <a class="dropdown-item" href="#">Brands</a>
                                         <a class="dropdown-item" href="#">Categories</a>
                                         <a class="dropdown-item" href="/products">Products</a>
@@ -97,8 +97,8 @@
             <div class="dashboard-nav">
                 <ul class="list-unstyled">
                     <li class="active"><a href="/home"><span class="dash-nav-icon"></span>Dashboard</a></li>
-                    <li><a href="#"><span class="dash-nav-icon"></span>Countries</a></li>
-                    <li><a href="#"><span class="dash-nav-icon"></span>Cities</a></li>
+                    <li><a href="/countries"><span class="dash-nav-icon"></span>Countries</a></li>
+                    <li><a href="/cities"><span class="dash-nav-icon"></span>Cities</a></li>
                     <li><a href="#"><span class="dash-nav-icon"></span>Brands</a></li>
                     <li><a href="#"><span class="dash-nav-icon"></span>Categories</a></li>
                     <li><a href="/products"><span class="dash-nav-icon"></span>Products</a></li>

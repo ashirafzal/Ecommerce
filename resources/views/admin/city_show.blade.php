@@ -3,10 +3,10 @@
 <div class="container-fluid">
     <div class="dashboard-content">
         <div class="row float-right">
-            <a href="variant-values-create" class="btn btn-primary">Create Variant Values</a>
+            <a href="#" class="btn btn-primary">Create Cities</a>
         </div>
         <div class="row">
-            <h2>Variant Values</h2>
+            <h2>Cities</h2>
         </div>
         <br>
         <div class="row">
@@ -14,21 +14,17 @@
                 <thead>
                     <tr>
                         <th scope="col">S.No</th>
-                        <th scope="col">Variant Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Compare Price</th>
-                        <th scope="col">Quantity</th>
+                        <th scope="col">City name</th>
+                        <th scope="col">Belongs to country</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @php($VariantValues = Helper::VariantValues())
-                    @foreach($VariantValues as $VariantValues)
+                    @php($city = Helper::city())
+                    @foreach($city as $cities)
                     <tr>
-                        <th scope="row">{{ $VariantValues->id }}</th>
-                        <td>{{ $VariantValues->variants }}</td>
-                        <td>{{ $VariantValues->price }}</td>
-                        <td>{{ $VariantValues->compare_price }}</td>
-                        <td>{{ $VariantValues->qty }}</td>
+                        <th scope="row">{{ $cities->id }}</th>
+                        <td>{{ $cities->name }}</td>
+                        <td>{{ $cities->country->name }}</td>
                         <td><a class="btn btn-info" href="#">View</a></td>
                         <td><a class="btn btn-primary" href="#">Edit</a></td>
                         <td><a class="btn btn-danger" href="#">Delete</a></td>

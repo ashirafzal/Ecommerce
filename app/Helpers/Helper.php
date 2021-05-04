@@ -4,11 +4,13 @@ namespace App\Helpers;
 
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\City;
 use App\Models\Country;
 use App\Models\Products;
 use App\Models\ProductVariant;
 use App\Models\Slider;
 use App\Models\SubCategory;
+use App\Models\VariantValue;
 
 class Helper
 {
@@ -79,4 +81,24 @@ class Helper
         return $ProductVariants;
     }
 
+    public static function VariantValues()
+    {
+        $VariantValues = VariantValue::all();
+
+        return $VariantValues;
+    }
+
+    public static function country()
+    {
+        $countries = Country::all();
+
+        return $countries;
+    }
+
+    public static function city()
+    {
+        $city = City::with('country')->get();
+
+        return $city;
+    }
 }

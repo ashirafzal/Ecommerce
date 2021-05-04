@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\City;
 use App\Models\Contact;
 use App\Models\Products;
 use App\Models\ProductVariant;
@@ -282,4 +283,12 @@ class WebsiteController extends Controller
 
         return redirect()->back()->withSuccess('Your Error has been report we will contact you soon about it.');
     }
+
+    public static function test()
+    {
+        $city = City::with('country')->get();
+
+        dd($city);
+    }
+    
 }
