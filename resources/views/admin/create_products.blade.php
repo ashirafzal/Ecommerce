@@ -34,6 +34,7 @@
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Category</label>
                 <select name="category" class="form-control @error('category') is-invalid @enderror" id="exampleFormControlSelect1">
+                    <option value=""></option>
                     @php($categories = Helper::categories())
                     @foreach($categories as $categories)
                     <option value="{{ $categories->id }}">{{ $categories->name }}</option>
@@ -48,6 +49,7 @@
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Sub Category</label>
                 <select name="subcategory" class="form-control @error('subcategory') is-invalid @enderror">
+                    <option value=""></option>
                     @php($subcategories = Helper::subcategories())
                     @foreach($subcategories as $subcategories)
                     <option value="{{ $subcategories->id }}">{{ $subcategories->name }}</option>
@@ -62,6 +64,7 @@
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Brands</label>
                 <select name="brands" class="form-control @error('brands') is-invalid @enderror">
+                    <option value=""></option>
                     @php($brand = Helper::brands())
                     @foreach($brand as $brands)
                     <option value="{{ $brands->id }}">{{ $brands->title }}</option>

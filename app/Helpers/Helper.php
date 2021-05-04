@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Country;
 use App\Models\Products;
+use App\Models\ProductVariant;
 use App\Models\Slider;
 use App\Models\SubCategory;
 
@@ -62,6 +63,20 @@ class Helper
         $products = Products::where('is_active',true)->paginate(50);
 
         return $products;
+    }
+
+    public static function AllProducts()
+    {
+        $products = Products::all();
+
+        return $products;
+    }
+
+    public static function ProductVariants()
+    {
+        $ProductVariants = ProductVariant::all();
+
+        return $ProductVariants;
     }
 
 }

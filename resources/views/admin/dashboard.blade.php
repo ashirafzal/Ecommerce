@@ -67,8 +67,8 @@
                                         <a class="dropdown-item" href="#">Brands</a>
                                         <a class="dropdown-item" href="#">Categories</a>
                                         <a class="dropdown-item" href="/products">Products</a>
-                                        <a class="dropdown-item" href="#">Product variants</a>
-                                        <a class="dropdown-item" href="#">Variant values</a>
+                                        <a class="dropdown-item" href="/product-variants">Product variants</a>
+                                        <a class="dropdown-item" href="/variant-values">Variant values</a>
                                         <a class="dropdown-item" href="#">My Profile </a>
                                         <a class="dropdown-item" href="/logout">Log Out</a>
                                     </div>
@@ -102,8 +102,8 @@
                     <li><a href="#"><span class="dash-nav-icon"></span>Brands</a></li>
                     <li><a href="#"><span class="dash-nav-icon"></span>Categories</a></li>
                     <li><a href="/products"><span class="dash-nav-icon"></span>Products</a></li>
-                    <li><a href="#"><span class="dash-nav-icon"></span>Product variants</a></li>
-                    <li><a href="#"><span class="dash-nav-icon"></span>Variant values</a></li>
+                    <li><a href="/product-variants"><span class="dash-nav-icon"></span>Product variants</a></li>
+                    <li><a href="/variant-values"><span class="dash-nav-icon"></span>Variant values</a></li>
                     <li><a href="#"><span class="dash-nav-icon"></span>My Profile </a></li>
                     <li><a href="/logout"><span class="dash-nav-icon"></span>Logout </a></li>
                 </ul>

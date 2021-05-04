@@ -37,4 +37,9 @@ class Products extends Model
         return $this->hasOne(Vendor::class,'id','vendor_id');
     }
 
+    public function variants()
+    {
+        return $this->hasMany(VariantValue::class);
+    }
+
 }

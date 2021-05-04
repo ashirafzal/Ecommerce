@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use App\Models\Products;
+use App\Models\ProductVariant;
 use App\Models\ReportAnError;
+use App\Models\VariantValue;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Request;
@@ -181,6 +183,56 @@ class WebsiteController extends Controller
         $product->delete();
 
         return redirect()->back()->withSuccess('Product has been deleted successfully.');
+    }
+
+    public function CreateProductVariant()
+    {
+        $validate = Validator::make(Request::all(), [
+            'product' => 'required',
+            'variant_name' => 'required',
+            'variant_type' => 'required'
+        ]);
+
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate->errors());
+        }
+
+        $ProductVariant = new ProductVariant();
+
+        $ProductVariant->product_id = request('product');
+        $ProductVariant->variant_name = request('variant_name');
+        $ProductVariant->variant_type = request('variant_type');
+
+        $ProductVariant->save();
+
+        return redirect()->back()->withSuccess('Product variant has been creeated successfully.');
+    }
+
+    public function CreateVariantValue()
+    {
+        $validate = Validator::make(Request::all(), [
+            'variant_value_name' => 'required',
+            'product_variant' => 'required',
+            'price' => 'required',
+            'compare_price' => 'required',
+            'qty' => 'required'
+        ]);
+
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate->errors());
+        }
+
+        $VariantValue = new VariantValue();
+
+        $VariantValue->product_id = request('product_variant');
+        $VariantValue->variants = request('variant_value_name');
+        $VariantValue->price = request('price');
+        $VariantValue->compare_price = request('compare_price');
+        $VariantValue->qty = request('qty');
+
+        $VariantValue->save();
+
+        return redirect()->back()->withSuccess('Variant value has been creeated successfully.');
     }
 
     public function contact()

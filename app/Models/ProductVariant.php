@@ -16,4 +16,10 @@ class ProductVariant extends Model
     {
         return $this->hasMany(VariantValue::class);
     }
+
+    public function product()
+    {
+        return $this->hasOne(Products::class,'id','product_id');
+    }
+
 }
