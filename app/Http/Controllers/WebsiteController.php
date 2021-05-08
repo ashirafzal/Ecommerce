@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\City;
 use App\Models\Contact;
 use App\Models\Products;
@@ -257,7 +258,9 @@ class WebsiteController extends Controller
 
         $contact->save();
 
-        return redirect()->back()->withSuccess('We will contact you soon.');
+        return response()->json(null, 200);
+        
+        // return redirect()->back()->withSuccess('We will contact you soon.');
     }
 
     public function ReportError()
@@ -286,9 +289,9 @@ class WebsiteController extends Controller
 
     public static function test()
     {
-        $city = City::with('country')->get();
+        $brands = Brand::with('country','city')->get();
 
-        dd($city);
+        dd($brands);
     }
     
 }

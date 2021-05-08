@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contactx');
 });
 
 Route::get('/about', function () {
@@ -34,7 +34,7 @@ Route::get('/report_error', function () {
 
 Route::post('contact', '\App\Http\Controllers\WebsiteController@contact');
 
-Route::post('error-report', '\App\Http\Controllers\WebsiteController@ReportError');
+Route::post('/contact-vue', '\App\Http\Controllers\FunctionalityController@submit');
 
 /*** End of main website routes ***/
 
@@ -57,6 +57,22 @@ Route::middleware('auth')->group(function () {
     });
 
     /* End of country related routes */
+
+    /* Brands related routes */
+
+    Route::get('/brands', function () {
+        return view('admin.brand_show');
+    });
+
+    /* End of brands related routes */
+
+    /* Categories related routes */
+
+    Route::get('/categories', function () {
+        return view('admin.categories_show');
+    });
+
+    /* End of categories related routes */
 
     /* City related routes */
 

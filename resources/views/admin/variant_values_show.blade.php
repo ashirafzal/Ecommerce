@@ -18,6 +18,7 @@
                         <th scope="col">Price</th>
                         <th scope="col">Compare Price</th>
                         <th scope="col">Quantity</th>
+                        <th scope="col">Product</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,6 +30,7 @@
                         <td>{{ $VariantValues->price }}</td>
                         <td>{{ $VariantValues->compare_price }}</td>
                         <td>{{ $VariantValues->qty }}</td>
+                        <td>{{ $VariantValues->product->name }}</td>
                         <td><a class="btn btn-info" href="#">View</a></td>
                         <td><a class="btn btn-primary" href="#">Edit</a></td>
                         <td><a class="btn btn-danger" href="#">Delete</a></td>

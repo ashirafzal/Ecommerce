@@ -3,10 +3,10 @@
 <div class="container-fluid">
     <div class="dashboard-content">
         <div class="row float-right">
-            <a href="products-variants-create" class="btn btn-primary">Create Product Variants</a>
+            <a href="#" class="btn btn-primary">Create Brands</a>
         </div>
         <div class="row">
-            <h2>Product Variants</h2>
+            <h2>Brands</h2>
         </div>
         <br>
         <div class="row">
@@ -14,19 +14,23 @@
                 <thead>
                     <tr>
                         <th scope="col">S.No</th>
-                        <th scope="col">Variant Name</th>
-                        <th scope="col">Variant Type</th>
-                        <th scope="col">Product</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Sub Title</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">City</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @php($ProductVariants = Helper::ProductVariants())
-                    @foreach($ProductVariants as $ProductVariant)
+                    @php($brand = Helper::brands())
+                    @foreach($brand as $brands)
                     <tr>
-                        <th scope="row">{{ $ProductVariant->id }}</th>
-                        <td>{{ $ProductVariant->variant_name }}</td>
-                        <td>{{ $ProductVariant->variant_type }}</td>
-                        <td>{{ $ProductVariant->product->name }}</td>
+                        <th scope="row">{{ $brands->id }}</th>
+                        <td>{{ $brands->title }}</td>
+                        <td>{{ $brands->sub_tittle }}</td>
+                        <td>{{ $brands->description }}</td>
+                        <td>{{ $brands->country->name }}</td>
+                        <td>{{ $brands->city->name }}</td>
                         <td><a class="btn btn-info" href="#">View</a></td>
                         <td><a class="btn btn-primary" href="#">Edit</a></td>
                         <td><a class="btn btn-danger" href="#">Delete</a></td>

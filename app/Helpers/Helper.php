@@ -27,6 +27,13 @@ class Helper
         return $categories;
     }
 
+    public static function Allcategories()
+    {
+        $categories = Category::all();
+
+        return $categories;
+    }
+
     public static function subcategories()
     {
         $subcategories = SubCategory::where('show_in_outlet', true)
@@ -48,7 +55,7 @@ class Helper
 
     public static function brands()
     {
-        $brands = Brand::paginate(20);
+        $brands = Brand::with('country','city')->paginate(20);
 
         return $brands;
     }
@@ -76,7 +83,7 @@ class Helper
 
     public static function ProductVariants()
     {
-        $ProductVariants = ProductVariant::all();
+        $ProductVariants = ProductVariant::with('product')->get();
 
         return $ProductVariants;
     }

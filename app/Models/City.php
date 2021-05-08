@@ -14,4 +14,9 @@ class City extends Model
     {
         return $this->hasOne(Country::class,'id','country_id');
     }
+
+    public function brands()
+    {
+        return $this->hasMany(Brands::class);
+    }
 }
