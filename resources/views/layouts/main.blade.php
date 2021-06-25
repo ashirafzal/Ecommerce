@@ -183,6 +183,10 @@
                             <li><a href="/about" class="nav-link">About</a></li>
                             <li><a href="/blogs" class="nav-link">Blog</a></li>
                             <li><a href="/contact" class="nav-link">Contact</a></li>
+                            <li><a href="/careers" class="nav-link">Careers</a></li>
+                            <li><a href="/login" class="nav-link">Login</a></li>
+                            <li><a href="/register" class="nav-link">Register</a></li>
+                            <li><a href="/report_error" class="nav-link">Report error</a></li>
                         </ul>
                     </nav>
 
