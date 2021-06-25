@@ -1,14 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <style>
     body {
-        font-size: 1.4rem;
-        font-family: sans-serif;
+        font-size: 1rem;
+    }
+
+    .card{
+        margin-top: 160px;
     }
 
     footer {
-        margin-top: 17.4rem;
+        clear: both;
+        position: relative;
+        margin-top: 460px;
     }
 </style>
 <style>

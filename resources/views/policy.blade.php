@@ -1,9 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('content')
 <style>
     body {
-        font-size: 16px;
-        font-family: sans-serif;
+        font-size: 14px;
+    }
+
+    .text-left{
+        color: #000;
     }
 
     .container{
@@ -15,17 +18,11 @@
     .form-check-label {
         margin-left: 16px;
     }
-
-    footer {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-    }
 </style>
 <div class="container border">
     <h1 class="text-center text-dark">Our Company Policy</h1>
-    <h2>1. Terms of Service</h2>
+    <br><br>
+    <h4>1. Terms of Service</h4>
     <p class="text-left">
         You need to iron out your e-commerce business’s Terms of Service as soon as your business opens its proverbial doors. Terms of Service — also known as Terms of Use,
         Terms and Conditions, or Disclaimers — describe the regulations that you attach to your e-commerce business. Visitors have to agree to these Terms of Service to use
@@ -40,7 +37,7 @@
         on your site. Having Terms of Service also lowers the likelihood of customer lawsuits against your business, as long as they are enforceable and fair under state and
         federal law.
     </p>
-    <h2>2. Privacy policy</h2>
+    <h4>2. Privacy policy</h4>
     <p class="text-left">
         Unlike a Terms of Service policy, a privacy policy is required by law. Under the GDPR mentioned earlier, e-commerce businesses must have privacy policies that achieve the following ends:
 
@@ -53,7 +50,7 @@
 
         The good news? Many sites provide online scripts to help you create a personalized and compliant privacy policy for your e-commerce business.
     </p>
-    <h2>3. Returns and exchanges policy</h2>
+    <h4>3. Returns and exchanges policy</h4>
     <p class="text-left">
         Will your e-commerce business offer returns or exchanges? You’ll need to iron out your returns policy before you ship out your first order. Your returns policy should answer the following questions:
 
@@ -66,11 +63,11 @@
         Are there any other conditions for returns or exchanges?
         Again, many returns and exchanges policy templates are available online. However, because these policies are so unique to each individual business, make sure your final product fully reflects your actual practices surrounding returns and exchanges.
     </p>
-    <h2>4. Shipping policy</h2>
+    <h4>4. Shipping policy</h4>
     <p class="text-left">
         Through your e-commerce business’s shipping policy, you need to delineate the details of how you will ship your customers’ purchases. This policy should include the shipping company options, the shipping speed options, pricing, handling times, and shipping restrictions. The more detailed your shipping policy, the more in-the-know your customers are. As a result of this knowledge, shoppers will be more in-tune with the details that will help them make the best purchase for their preferences.
     </p>
-    <h2>5. Taxes</h2>
+    <h4>5. Taxes</h4>
     <p class="text-left">
         Finally, you need to stay on top of the confusing tax laws that apply to e-commerce businesses. You need to charge sales tax on a transaction if a state government decides you have a nexus with its state.
 

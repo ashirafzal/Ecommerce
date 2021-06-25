@@ -1,18 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <style>
     body {
-        font-size: 1.4rem;
-        font-family: sans-serif;
+        font-size: 1rem;
     }
 
-    .form-check-label{
+    .form-check-label {
         margin-left: 16px;
     }
 
-    footer{
-        margin-top: 22.6rem;
+    .card{
+        margin-top: 200px;
+    }
+
+    footer {
+        clear: both;
+        position: relative;
+        margin-top: 640px;
     }
 </style>
 <div class="container">

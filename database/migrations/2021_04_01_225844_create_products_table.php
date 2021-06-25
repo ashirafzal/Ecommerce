@@ -25,7 +25,7 @@ class CreateProductsTable extends Migration
             $table->foreign('vendor_id')->references('id')->on('vendors')->onDelete('cascade');
             $table->unsignedInteger('brand_id');
             $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
-            $table->timestamp('min_delete_time')->useCurrent();
+            $table->timestamp('min_delete_time')->nullable();
             $table->integer('qty_in_stock')->default(0);
             $table->double('compare_price');
             $table->string('description')->nullable();

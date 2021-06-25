@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 /*** Main website routes ***/
 
+Route::get('/test-blade', function () {
+    return view('test');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,7 +38,11 @@ Route::get('/report_error', function () {
 
 Route::post('contact', '\App\Http\Controllers\WebsiteController@contact');
 
+Route::post('error-report', '\App\Http\Controllers\WebsiteController@ReportError');
+
 Route::post('/contact-vue', '\App\Http\Controllers\FunctionalityController@submit');
+
+Route::post('/error-report-vue', '\App\Http\Controllers\FunctionalityController@ReportError');
 
 /*** End of main website routes ***/
 

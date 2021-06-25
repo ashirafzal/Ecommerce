@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,27 +10,38 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Contact</title>
     <style>
-        body{
+        body {
             font-family: sans-serif;
         }
-        label{
-            font-size:1.5rem;
+
+        label {
+            font-size: 1rem;
         }
-        form{
+
+        form {
             padding: 2rem;
             margin-bottom: 4rem;
         }
-        .text-danger{
-            font-size:1.5rem;
+
+        .text-danger {
+            font-size: 1rem;
+        }
+
+        footer {
+            clear: both;
+            position: relative;
+            margin-top: 340px;
         }
     </style>
 </head>
+
 <body>
-@extends('layouts.app')
-@section('content')
-<div id="app">
-    <example-component />
-</div>
-@endsection
+    @extends('layouts.main')
+    @section('content')
+    <div id="app">
+        <example-component />
+    </div>
+    @endsection
 </body>
+
 </html>

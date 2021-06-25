@@ -21,7 +21,7 @@ class Helper
 
     public static function categories()
     {
-        $categories = Category::where('show_in_outlet', true)
+        $categories = Category::with('subcategory')->where('show_in_outlet', true)
             ->get();
 
         return $categories;
