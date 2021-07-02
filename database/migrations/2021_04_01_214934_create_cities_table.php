@@ -16,8 +16,8 @@ class CreateCitiesTable extends Migration
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedInteger('country_id');
-            $table->foreign('country_id')->references('id')->on('countries')->onUpdate('cascade');
+            $table->bigInteger('country_id');
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->timestamps();
             $table->softDeletes();
         });
